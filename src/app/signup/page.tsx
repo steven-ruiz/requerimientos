@@ -26,9 +26,9 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center">
       <form
-        className="space-y-6 font-[sans-serif] text-[#333] max-w-md mx-auto"
+        className="space-y-6 font-[sans-serif] text-[#333] w-[500px] mx-auto"
         onSubmit={handleSubmit}
       >
         <div className="relative flex items-center">
@@ -37,7 +37,7 @@ const RegisterForm = () => {
             placeholder="Nombre de Usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>
 
@@ -47,7 +47,7 @@ const RegisterForm = () => {
             placeholder="Correo Electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-[#f0f1f2] w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>
 
@@ -57,7 +57,7 @@ const RegisterForm = () => {
             placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-[#f0f1f2] w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>
 
@@ -67,20 +67,20 @@ const RegisterForm = () => {
             placeholder="Verificar Contraseña"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-[#f0f1f2] w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-white border border-black py-3 px-6 cursor-pointer font-bold w-full"
+          className="bg-white border border-white py-3 px-6 cursor-pointer font-bold w-full"
         >
           Registrarse
         </button>
 
         <hr className="my-6" />
         <p className="text-center">
-          <a href="/login" className="text-black hover:underline">
+          <a href="/login" className="text-white hover:underline">
             Inicio de sesión
           </a>
         </p>

@@ -39,7 +39,7 @@ const Form = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <form
-        className="space-y-6 font-[sans-serif] text-white max-w-md mx-auto"
+        className="space-y-6 font-[sans-serif] text-white w-[500px] mx-auto"
         onSubmit={handleSubmit}
       >
         <div className="relative flex items-center">
