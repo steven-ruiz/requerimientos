@@ -26,13 +26,13 @@ export default function Menu() {
         {isLoggedIn && (
             <>
                 <div className="flex flex-wrap gap-2 ml-4 flex-grow">
-                    <MenuOption text="Servicios" link="/" isActive={pathname === "/"}/>
-                    <MenuOption text="Acerca de Nosotros" link="/about-us" isActive={pathname === "/about-us"}/>
-                    <MenuOption text="Testimonios" link="/testimonials" isActive={pathname === "/testimonials"}/>
-                    <MenuOption text="Contactanos" link="/contact" isActive={pathname === "/contact"}/>
+                    <MenuOption text="Servicios" link="/"/>
+                    <MenuOption text="Acerca de Nosotros" link="/about-us"/>
+                    <MenuOption text="Testimonios" link="/testimonials"/>
+                    <MenuOption text="Contactanos" link="/contact"/>
                 </div>
                 <div className={styles.profile}>
-                    <MenuOption text="Mi perfil" link="/profile" isActive={pathname === "/profile"}/>
+                    <MenuOption text="Mi perfil" link="/profile"/>
                 </div>
             </>
         )}
