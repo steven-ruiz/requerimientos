@@ -1,9 +1,10 @@
 import Link from "next/link";
+import classNames from "classnames";
 
-export default function MenuOption({text, link = "/"}: {text: string, link?: string}) {
+export default function MenuOption({text, link = "/", isActive = false}: {text: string, link?: string, isActive?: boolean}) {
     return (
         <Link href={link}>
-            <div className="px-2 py-1 border-r-[1px] border-white">{text}</div>
+            <div className={classNames("px-2 py-1 border-r-[1px] border-white", isActive ? "text-blue-500 " : "text-white")}>{text}</div>
         </Link>
     )
 }
