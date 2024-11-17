@@ -1,4 +1,14 @@
+'use client'
+
+import { useState, useEffect } from "react";
+
+
 export default function Profile() {
+    const [user, setUser] = useState<{ email: string, username: string }>({ email: "", username: "" });
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("user") || "{}");
+        setUser(user);
+    }, []);
     return(
         <div className="max-w-2xl mx-auto p-8">
             <div className="flex items-center gap-8">
@@ -14,11 +24,11 @@ export default function Profile() {
                     <div className="space-y-2">
                         <p className="text-lg">
                             <span className="font-semibold">Nombre: </span>
-                            <span>John Doe</span>
+                            <span>{user.username}</span>
                         </p>
                         <p className="text-lg">
                             <span className="font-semibold">Correo: </span>
-                            <span>john.doe@example.com</span>
+                            <span>{user.email}</span>
                         </p>
                     </div>
                 </div>

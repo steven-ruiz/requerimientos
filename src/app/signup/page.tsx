@@ -16,8 +16,11 @@ const RegisterForm = () => {
 
     if (password === confirmPassword) {
       // Redirige a la página home después de registrarse
+      localStorage.setItem("user", JSON.stringify({ email, username, password }));
+      localStorage.setItem("email", email);
       router.push("/");
     } else {
+      localStorage.removeItem("user");
       alert("Las contraseñas no coinciden");
     }
   };
@@ -30,20 +33,20 @@ const RegisterForm = () => {
       >
         <div className="relative flex items-center">
           <input
-            type="email"
-            placeholder="Correo Electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            placeholder="Nombre de Usuario"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>
 
         <div className="relative flex items-center">
           <input
-            type="text"
-            placeholder="Nombre de Usuario"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            placeholder="Correo Electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
           />
         </div>

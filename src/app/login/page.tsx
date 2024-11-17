@@ -11,8 +11,12 @@ const Form = () => {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
-    if (!verifyEmailFormat(email)) {
+    if (localStorage.getItem("user") === undefined || localStorage.getItem("user") === null) {
+      if (confirm("Usuario no encontrado, desea registrarse?")) {
+        router.push("/signup");
+      }
+      return;
+    }else if (!verifyEmailFormat(email)) {
       alert("Formato de email inválido");
       return;
     }else if (password.length < 8) {
@@ -33,9 +37,9 @@ const Form = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center">
       <form
-        className="space-y-6 font-[sans-serif] text-[#333] max-w-md mx-auto"
+        className="space-y-6 font-[sans-serif] text-white max-w-md mx-auto"
         onSubmit={handleSubmit}
       >
         <div className="relative flex items-center">
@@ -44,7 +48,7 @@ const Form = () => {
             placeholder="Enter Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-[#f0f1f2] bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
           />
 
           <svg
@@ -81,7 +85,7 @@ const Form = () => {
             placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="px-6 py-4 bg-[#f0f1f2] focus:bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
+            className="px-6 py-4 bg-[#f0f1f2] bg-transparent w-full text-sm border outline-[#007bff] rounded transition-all"
           />
 
           <svg
@@ -110,18 +114,18 @@ const Form = () => {
 
         <button
           type="submit"
-          className="bg-white border border-black py-3 px-6 cursor-pointer font-bold w-full"
+          className="bg-white border border-black py-3 px-6 cursor-pointer font-bold w-full text-black"
         >
           Registrarse
         </button>
 
         <hr className="my-6" />
         <p className="text-center">
-          <a href="#" className="text-black hover:underline">
+          <a href="#" className="text-white hover:underline">
             Olvidó la contraseña?
           </a>{" "}
           |{" "}
-          <a href="/registrarse" className="text-black hover:underline">
+          <a href="/signup" className="text-white hover:underline">
             Crear cuenta
           </a>
         </p>

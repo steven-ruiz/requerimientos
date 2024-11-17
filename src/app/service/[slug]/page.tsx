@@ -37,7 +37,7 @@ export default function Service({params}: {params: {slug: string}}) {
                 </div>
             </div>
             <div className="w-full max-w-md mt-8">
-                <h2 className="text-2xl font-bold border-b-[1px] border-white pb-2 mb-4">Agendar servicio</h2>
+                <h2 className="text-2xl font-bold border-b-[1px] border-white pb-2 mb-4">Seleccionar Fecha y Hora</h2>
                 <input 
                     type="datetime-local" 
                     className="w-full p-2 rounded bg-white/10 text-white border border-white/30 focus:outline-none focus:border-white"
