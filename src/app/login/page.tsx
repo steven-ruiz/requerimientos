@@ -11,8 +11,25 @@ const Form = () => {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log({ email, password, rememberMe });
+
+    if (!verifyEmailFormat(email)) {
+      alert("Formato de email inválido");
+      return;
+    }else if (password.length < 8) {
+      alert("La contraseña debe tener al menos 8 caracteres");
+      return;
+    }else if (password.length > 16) {
+      alert("La contraseña debe tener menos de 16 caracteres");
+      return;
+    }else{
+      localStorage.setItem("email", email);
+    }
     router.push("/");
+  };
+
+  const verifyEmailFormat = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
   };
 
   return (
