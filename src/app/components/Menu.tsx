@@ -17,7 +17,7 @@ export default function Menu() {
     }, []);
 
     return (
-        
+
     <nav className= 'flex justify-between items-center py-5 px-10 border-b border-white fixed top-0 w-full bg-[#0d0c43]'>
         <div className='flex items-center'>
           <Link href="/">
@@ -31,6 +31,7 @@ export default function Menu() {
                     <MenuOption text="Acerca de Nosotros" link="/about-us"/>
                     <MenuOption text="Testimonios" link="/testimonials"/>
                     <MenuOption text="Contactanos" link="/contact"/>
+                    <MenuOption text="Preguntas Frecuentes" link="/faq"/>
                 </div>
                 <div className='flex flex-wrap gap-2'>
                     {isLoggedIn && (

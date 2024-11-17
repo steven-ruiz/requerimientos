@@ -60,7 +60,8 @@ export const servicesData = [
         serviceLink: "/service/cooking"
     },
 ]
-
+export const paymentMethods = ["Tarjeta de Crédito", "Tarjeta de débito", "Transferencia bancaria", "Sinpe", "Efectivo"];
+export const availableZones = ["Cartago", "San José", "Alajuela", "Heredia",];
 export const testimonialsData = [
     {
         testimonialText: "El servicio de lavado de autos fue excelente. Mi carro quedó impecable y el equipo fue muy profesional. Definitivamente lo recomiendo.",
@@ -86,5 +87,27 @@ export const testimonialsData = [
         testimonialText: "La limpieza del hogar fue muy profesional. Mi casa quedó impecable y el equipo fue muy detallista. Lo contrataré nuevamente.",
         testimonialAuthor: "Ana Jiménez",
         testimonialService: "Limpieza del Hogar"
+    }
+]
+export const faqData = [
+    {
+        question: "¿Cómo puedo agendar un servicio?",
+        answer: "Puede agendar un servicio seleccionándolo desde nuestra página principal, eligiendo la fecha y hora que más le convenga, y completando el proceso de pago."
+    },
+    {
+        question: "¿Qué métodos de pago aceptan?",
+        answer: "Aceptamos múltiples métodos de pago incluyendo tarjetas de crédito/débito, transferencias bancarias, Sinpe y efectivo."
+    },
+    {
+        question: "¿En qué zonas brindan servicios?",
+        answer: "Actualmente brindamos servicios en Cartago, San José, Alajuela y Heredia."
+    },
+    {
+        question: "¿Puedo cancelar o reprogramar un servicio?",
+        answer: "Sí, puede cancelar o reprogramar su servicio con al menos 24 horas de anticipación sin ningún cargo adicional."
+    },
+    {
+        question: "¿Los servicios incluyen materiales?",
+        answer: "Los materiales básicos están incluidos en el precio. Para trabajos que requieran materiales especiales, se cotizarán por separado."
     }
 ]
