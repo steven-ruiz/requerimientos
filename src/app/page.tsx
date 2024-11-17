@@ -1,6 +1,6 @@
 import Image from "next/image";
-import styles from "./css/home.module.css"
-import Link from 'next/link';
+import styles from "./css/home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,7 +8,9 @@ export default function Home() {
       {/* Navbar Section */}
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Link href="/login">
+            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          </Link>
         </div>
         <div className={styles.menu}>
           <Link href="/">Menú</Link>
@@ -33,7 +35,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }
