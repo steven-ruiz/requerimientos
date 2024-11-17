@@ -32,7 +32,7 @@ export default function Menu() {
                     <MenuOption text="Contactanos" link="/contact" isActive={pathname === "/contact"}/>
                 </div>
                 <div className={styles.profile}>
-                <Link href="/profile">Mi perfil</Link>
+                    <MenuOption text="Mi perfil" link="/profile" isActive={pathname === "/profile"}/>
                 </div>
             </>
         )}
